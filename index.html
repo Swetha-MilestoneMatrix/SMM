@@ -20,6 +20,32 @@
             background-attachment: fixed;
         }
 
+       /* NAVIGATION BAR */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            z-index: 999;
+        }
+
+        nav a {
+            margin: 0 25px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #003049;
+            font-size: 16px;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #0077b6;
+        }
+
         .wrapper {
             max-width: 1100px;
             margin: auto;
@@ -92,6 +118,17 @@
 </head>
 
 <body>
+    
+    <!-- TOP NAVIGATION -->
+    <nav>
+        <a href="#summary">Summary</a>
+        <xperience</a>
+        #skillsSkills</a>
+        #achievementsAchievements</a>
+        #educationEducation</a>
+        #contactContact</a>
+    </nav>
+
     <div class="wrapper">
 
         <!-- HEADER CARD -->
@@ -100,7 +137,7 @@
             <h2>Network Consultant</h2>
         </div>
 
-            <div class="card">
+            <div class="card" id="summary">
             <div class="section-title">Summary</div>
                 <p>
                     Networking professional with 8+ years of experience in designing, deploying,
@@ -111,7 +148,7 @@
 
             </div>
 
-            <div class="card">
+           <div class="card" id="experience">
                 <div class="section-title">Professional Experience</div>
 
                 <h3>Network Consultant – Hewlett-Packard Enterprise (2023–Present)</h3>
@@ -139,14 +176,16 @@
                 </ul>
             </div>
 
-           <div class="card">
+          <div class="card" id="skills">
                 <div class="section-title">Technical Skills</div>
+              <div class="grid-2">
                 <ul>
                     <li>Cisco, Aruba, Juniper Networking</li>
                     <li>AWS & Azure management</li>
                     <li>Palo Alto & Fortinet Firewalls</li>
                 </ul>
                 <div class="section-title">Tool Skills</div>
+                  <div class="grid-2">
                 <ul>
                     <li>Ekahau AI Pro, IRIS, Aruba Central, ClearPass</li>
                     <li>NetFlow, NetXplorer, MS Visio</l
@@ -154,7 +193,7 @@
             </div>
 
 <!-- Achievements -->
-            <div class="card">
+           <div class="card" id="achievements">
                 <div class="section-title">Achievements</div>
                 <ul>
                     <li>Bravo Award – Tech Mahindra (2019)</li>
@@ -164,12 +203,12 @@
             </div>
 
 <!-- Education -->
-            <div class="card">
+            <div class="card" id="education">
                 <div class="section-title">Education</div>
                 <p>Bachelor’s Degree, Prince Shri Venkateshwara Padmavathy Engineering College, Anna University (2017) – 8.4 CGPA</p>
             </div>
 
-           <div class="card">
+           <div class="card" id="contact">
                 <div class="section-title">Contact</div>
                 <p>📞 +91-8838999715</p>
                 <p>📧 <a href="mailto:swetharpsk@gmail.com">swetharpsk@gmail.com</a></p>
