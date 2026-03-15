@@ -3,6 +3,8 @@
 <head>
 <title>Swetha R | Network Consultant</title>
 
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
 <style>
 
 html{
@@ -12,47 +14,36 @@ scroll-behavior:smooth;
 body{
 font-family: Arial;
 margin:0;
-background:#f4f6f8;
-position:relative;
+background:#0a192f;
+color:#333;
 }
 
-/* NETWORK TOPOLOGY BACKGROUND */
+/* PARTICLE BACKGROUND */
 
-.network-bg{
+#particles-js{
 position:fixed;
-top:0;
-left:0;
 width:100%;
 height:100%;
+top:0;
+left:0;
 z-index:-1;
-background: radial-gradient(circle at 20% 20%, #1a73e8 2px, transparent 2px),
-            radial-gradient(circle at 80% 40%, #1a73e8 2px, transparent 2px),
-            radial-gradient(circle at 40% 70%, #1a73e8 2px, transparent 2px),
-            radial-gradient(circle at 70% 80%, #1a73e8 2px, transparent 2px);
-background-size:200px 200px;
-animation: networkMove 20s linear infinite;
-opacity:0.15;
-}
-
-@keyframes networkMove{
-0%{background-position:0 0, 50px 50px,100px 100px,150px 150px;}
-100%{background-position:200px 200px,250px 250px,300px 300px,350px 350px;}
 }
 
 /* HEADER */
 
 header{
-background:linear-gradient(135deg,#1a73e8,#0f4db8);
+background:rgba(0,0,0,0.6);
 color:white;
 padding:40px;
 text-align:center;
+backdrop-filter: blur(5px);
 }
 
 /* NAVIGATION */
 
 nav{
-background:#333;
-padding:10px;
+background:#111;
+padding:12px;
 text-align:center;
 }
 
@@ -65,10 +56,7 @@ transition:0.3s;
 }
 
 nav a:hover{
-color:#1a73e8;
-background:white;
-padding:6px 10px;
-border-radius:5px;
+color:#00d4ff;
 }
 
 /* SECTIONS */
@@ -77,42 +65,29 @@ section{
 padding:40px;
 max-width:900px;
 margin:auto;
-animation:fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
 }
 
 /* CARDS */
 
 .card{
 background:white;
-padding:20px;
+padding:25px;
 margin:20px 0;
 border-radius:10px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-8px);
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* CONTACT LINKS */
+/* CONTACT */
 
 #contact a{
 color:#1a73e8;
-font-weight:bold;
 text-decoration:none;
+font-weight:bold;
 }
 
 #contact a:hover{
@@ -124,8 +99,9 @@ text-decoration:underline;
 footer{
 text-align:center;
 padding:20px;
-background:#222;
+background:#111;
 color:white;
+margin-top:40px;
 }
 
 </style>
@@ -133,7 +109,7 @@ color:white;
 
 <body>
 
-<div class="network-bg"></div>
+<div id="particles-js"></div>
 
 <header>
 <h1>Swetha R</h1>
@@ -145,50 +121,51 @@ color:white;
 <a href="#career">CAREER</a>
 <a href="#skills">SKILLS</a>
 <a href="#projects">PROJECTS</a>
-<a href="#achievements">ACHIEVEMENTS</a>
 <a href="#contact">CONTACT</a>
 </nav>
 
 <section id="about">
 <div class="card">
-<h2><b>Professional Summary</b></h2>
+<h2>Professional Summary</h2>
 <p>
-Networking professional with 8+ years of experience in designing, deploying, and
-troubleshooting enterprise WLAN, LAN, and WAN environments. Strong track
-record in delivering stable, high-performance network solutions and leading
-successful implementation and migration projects.
+Networking professional with 8+ years of experience in designing, deploying,
+and troubleshooting enterprise WLAN, LAN, and WAN environments.
 </p>
 </div>
 </section>
 
 <section id="career">
 <div class="card">
-<h2><b>CAREER JOURNEY</b></h2>
 
-<p><b>NETWORK CONSULTANT</b></p>
+<h2>Career Journey</h2>
+
+<p><b>Network Consultant</b></p>
 <p>Hewlett-Packard Enterprise (Payroll: NetConnect Global)</p>
-<p>2023 – present</p>
+<p>2023 – Present</p>
+
 <ul>
-<li>Led enterprise WLAN/LAN design and migration activities including Ekahau predictive surveys, HLD/LLD creation and campus network planning.</li>
-<li>Coordinated directly with customers for site planning, requirements gathering and material readiness.</li>
-<li>Validated campus network deployments through Aruba Central and configured Aruba AOS-CX switches, WLCs and APs.</li>
+<li>Led enterprise WLAN/LAN design including Ekahau predictive surveys.</li>
+<li>Created HLD/LLD and campus network planning.</li>
+<li>Configured Aruba switches, WLC and AP deployments.</li>
 </ul>
 
-<p><b>SW/APP/CLOUD TECH SUPPORT</b></p>
-<p>Accenture Solutions Pvt Ltd</p>
+<p><b>SW/App/Cloud Tech Support</b></p>
+<p>Accenture Solutions</p>
 <p>2021 – 2023</p>
+
 <ul>
-<li>Delivered L3 troubleshooting across global WAN/MAN infrastructure covering Cisco, Juniper, FortiGate, Palo Alto and Allot devices.</li>
-<li>Led infrastructure upgrades including OS firmware upgrades, VPN updates and device replacements.</li>
-<li>Managed ~2000 network devices and configured project routers with redundancy using HSRP and iBGP.</li>
+<li>L3 troubleshooting across WAN/MAN infrastructure.</li>
+<li>Handled firmware upgrades, VPN changes and major incidents.</li>
+<li>Managed ~2000 network devices globally.</li>
 </ul>
 
-<p><b>SOFTWARE ENGINEER</b></p>
-<p>Tech Mahindra Pvt Ltd</p>
+<p><b>Software Engineer</b></p>
+<p>Tech Mahindra</p>
 <p>2018 – 2021</p>
+
 <ul>
-<li>Delivered cost effective WAN solutions including 1FL and ADSL provisioning.</li>
-<li>Handled major incidents, escalations and root cause analysis.</li>
+<li>WAN provisioning and carrier coordination.</li>
+<li>Handled P1/P2 incidents and RCA.</li>
 </ul>
 
 </div>
@@ -197,19 +174,21 @@ successful implementation and migration projects.
 <section id="skills">
 <div class="card">
 
-<h2><b>TECHNICAL SKILLS</b></h2>
+<h2>Technical Skills</h2>
+
 <ul>
 <li>Cisco, Aruba, Juniper Networking</li>
-<li>Azure and AWS Console Management</li>
+<li>Azure & AWS</li>
 <li>Palo Alto & Fortinet Firewall</li>
 </ul>
 
-<h2><b>TOOLS EXPERTISE</b></h2>
+<h2>Tools Expertise</h2>
+
 <ul>
-<li>Ekahau AI Pro & IRIS</li>
-<li>Aruba Central & ClearPass</li>
-<li>NetFlow & NetXplorer</li>
-<li>MS Visio (HLD / LLD Design)</li>
+<li>Ekahau AI Pro</li>
+<li>Aruba Central</li>
+<li>ClearPass</li>
+<li>MS Visio</li>
 </ul>
 
 </div>
@@ -217,18 +196,16 @@ successful implementation and migration projects.
 
 <section id="projects">
 <div class="card">
-<h2><b>PROJECTS</b></h2>
 
-<p><b>Nestlé Enterprise Factory Project</b></p>
+<h2>Projects</h2>
+
+<p><b>Nestlé Enterprise Factory</b></p>
+
 <ul>
-<li>Contributed to end-to-end implementation of enterprise factory network infrastructure.</li>
-<li>Worked on LAN and WLAN architecture design and deployment.</li>
-<li>Participated in planning, capacity analysis and network architecture discussions.</li>
-<li>Configured switching infrastructure including VLAN segmentation.</li>
-<li>Supported WLAN deployment and access point planning.</li>
-<li>Performed validation testing for performance and connectivity.</li>
-<li>Troubleshot LAN/WLAN issues ensuring minimal disruption.</li>
-<li>Collaborated with cross-functional teams for seamless rollout.</li>
+<li>Designed and deployed enterprise LAN and WLAN infrastructure.</li>
+<li>Participated in planning, capacity analysis and architecture discussions.</li>
+<li>Configured VLAN segmentation and switching infrastructure.</li>
+<li>Performed validation testing and troubleshooting.</li>
 </ul>
 
 </div>
@@ -236,15 +213,57 @@ successful implementation and migration projects.
 
 <section id="contact">
 <div class="card">
-<h2><b>CONTACT</b></h2>
+
+<h2>Contact</h2>
+
 <p>Email: swetharpsk@email.com</p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/swetha-r-87ba2612a" target="_blank">View LinkedIn Profile</a></p>
+
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/swetha-r-87ba2612a" target="_blank">
+View LinkedIn
+</a>
+</p>
+
 </div>
 </section>
 
 <footer>
-<p>© Swetha_Milestone_Matrix</p>
+<p>© Swetha Milestone Matrix</p>
 </footer>
+
+<script>
+
+particlesJS("particles-js", {
+
+"particles":{
+
+"number":{
+"value":80
+},
+
+"size":{
+"value":3
+},
+
+"line_linked":{
+"enable":true,
+"distance":150,
+"color":"#00d4ff",
+"opacity":0.4,
+"width":1
+},
+
+"move":{
+"enable":true,
+"speed":2
+}
+
+}
+
+});
+
+</script>
 
 </body>
 </html>
