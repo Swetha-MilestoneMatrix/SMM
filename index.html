@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,13 +8,7 @@
 
 <title>Swetha R | Network Consultant</title>
 
-<!-- Google Fonts -->
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-
-<!-- Particles -->
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <style>
 
@@ -23,30 +18,58 @@ padding:0;
 box-sizing:border-box;
 }
 
+body{
+font-family:'Poppins',sans-serif;
+background:#020617;
+color:white;
+overflow-x:hidden;
+}
+
 html{
 scroll-behavior:smooth;
 }
 
-body{
+/* ---------------- BACKGROUND NETWORK ANIMATION ---------------- */
 
-font-family:'Poppins',sans-serif;
-background:linear-gradient(120deg,#0a192f,#020617);
-color:white;
+.network-bg{
 
-}
-
-/* PARTICLES */
-
-#particles-js{
 position:fixed;
 width:100%;
 height:100%;
 top:0;
 left:0;
 z-index:-1;
+overflow:hidden;
+
 }
 
-/* HEADER */
+.icon{
+
+position:absolute;
+opacity:0.12;
+animation:float 25s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh) rotate(0deg);
+}
+
+100%{
+transform:translateY(-10vh) rotate(360deg);
+}
+
+}
+
+/* Different sizes */
+
+.icon.small{width:40px}
+.icon.medium{width:70px}
+.icon.large{width:110px}
+
+/* ---------------- HEADER ---------------- */
 
 header{
 
@@ -59,7 +82,7 @@ header h1{
 
 font-family:'Playfair Display',serif;
 font-size:52px;
-letter-spacing:2px;
+
 background:linear-gradient(90deg,#00eaff,#7a5cff);
 -webkit-background-clip:text;
 color:transparent;
@@ -69,24 +92,26 @@ color:transparent;
 header p{
 
 margin-top:15px;
-font-size:18px;
 color:#cbd5e1;
+font-size:18px;
 
 }
 
-/* NAVIGATION */
+/* ---------------- NAV ---------------- */
 
 nav{
 
 display:flex;
 justify-content:center;
 gap:35px;
-padding:20px;
-background:rgba(255,255,255,0.04);
+
+padding:18px;
+
+background:rgba(255,255,255,0.05);
 backdrop-filter:blur(12px);
+
 position:sticky;
 top:0;
-z-index:10;
 
 }
 
@@ -95,36 +120,38 @@ nav a{
 text-decoration:none;
 color:#cbd5e1;
 font-weight:500;
-transition:0.3s;
 
 }
 
 nav a:hover{
 
 color:#00eaff;
+
 }
 
-/* SECTIONS */
+/* ---------------- SECTIONS ---------------- */
 
 section{
 
 max-width:1000px;
 margin:auto;
-padding:80px 25px;
+padding:70px 25px;
 
 }
 
-/* CARD STYLE */
+/* ---------------- CARDS ---------------- */
 
 .card{
 
-background:rgba(255,255,255,0.06);
-backdrop-filter:blur(18px);
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(16px);
+
 border-radius:18px;
+
 padding:40px;
 margin-bottom:35px;
 
-box-shadow:0 15px 40px rgba(0,0,0,0.4);
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
 
 transition:0.35s;
 
@@ -132,56 +159,48 @@ transition:0.35s;
 
 .card:hover{
 
-transform:translateY(-10px) scale(1.01);
-box-shadow:0 25px 60px rgba(0,0,0,0.6);
+transform:translateY(-10px);
+box-shadow:0 30px 70px rgba(0,0,0,0.7);
 
 }
 
-/* HEADINGS */
+/* ---------------- HEADINGS ---------------- */
 
 h2{
 
 font-family:'Playfair Display',serif;
-font-size:30px;
-margin-bottom:18px;
 color:#00eaff;
+margin-bottom:18px;
 
 }
 
-/* LIST */
+/* ---------------- LIST ---------------- */
 
 ul{
-
-margin-top:12px;
 padding-left:20px;
-
 }
 
 li{
-
 margin:8px 0;
 color:#e2e8f0;
-
 }
 
-/* PROJECT BOX */
+/* ---------------- PROJECT BOX ---------------- */
 
 .project{
 
+background:rgba(255,255,255,0.04);
 padding:20px;
-border-radius:12px;
-background:rgba(255,255,255,0.05);
-margin-top:20px;
+border-radius:10px;
 
 }
 
-/* CONTACT */
+/* ---------------- CONTACT ---------------- */
 
 #contact a{
 
 color:#00eaff;
 text-decoration:none;
-font-weight:500;
 
 }
 
@@ -191,14 +210,13 @@ text-decoration:underline;
 
 }
 
-/* FOOTER */
+/* ---------------- FOOTER ---------------- */
 
 footer{
 
 text-align:center;
 padding:30px;
 color:#94a3b8;
-font-size:14px;
 
 }
 
@@ -208,7 +226,17 @@ font-size:14px;
 
 <body>
 
-<div id="particles-js"></div>
+<!-- NETWORK ANIMATED BACKGROUND -->
+
+<div class="network-bg">
+
+<img src="https://cdn-icons-png.flaticon.com/512/4241/4241910.png" class="icon small" style="left:10%; animation-duration:28s;">
+<img src="https://cdn-icons-png.flaticon.com/512/2881/2881142.png" class="icon medium" style="left:25%; animation-duration:35s;">
+<img src="https://cdn-icons-png.flaticon.com/512/906/906324.png" class="icon small" style="left:40%; animation-duration:32s;">
+<img src="https://cdn-icons-png.flaticon.com/512/483/483361.png" class="icon large" style="left:70%; animation-duration:40s;">
+<img src="https://cdn-icons-png.flaticon.com/512/906/906334.png" class="icon medium" style="left:85%; animation-duration:36s;">
+
+</div>
 
 <header>
 
@@ -236,10 +264,7 @@ font-size:14px;
 
 <p>
 
-Enterprise Network Consultant with 8+ years of experience designing and
-deploying enterprise LAN, WLAN and WAN environments. Skilled in Aruba,
-Cisco and Juniper infrastructure with expertise in wireless design,
-Ekahau predictive surveys and large-scale network troubleshooting.
+Enterprise Network Consultant with 8+ years of experience designing and deploying enterprise LAN, WLAN and WAN environments. Specialized in Aruba and Cisco infrastructure, wireless design using Ekahau predictive surveys and large-scale network troubleshooting.
 
 </p>
 
@@ -254,36 +279,25 @@ Ekahau predictive surveys and large-scale network troubleshooting.
 <h2>Career Journey</h2>
 
 <p><b>Network Consultant</b></p>
-<p>Hewlett-Packard Enterprise (NetConnect Global)</p>
+<p>Hewlett-Packard Enterprise</p>
 <p>2023 – Present</p>
 
 <ul>
-<li>Designed enterprise WLAN using Ekahau predictive surveys.</li>
-<li>Created HLD/LLD network architecture.</li>
-<li>Configured Aruba switches, WLC and AP deployments.</li>
+<li>Enterprise WLAN design using Ekahau predictive surveys</li>
+<li>Created HLD/LLD architecture</li>
+<li>Configured Aruba switches, WLC and APs</li>
 </ul>
 
 <br>
 
 <p><b>SW/App/Cloud Tech Support</b></p>
-<p>Accenture Solutions</p>
+<p>Accenture</p>
 <p>2021 – 2023</p>
 
 <ul>
-<li>L3 troubleshooting across WAN/MAN infrastructure.</li>
-<li>Managed ~2000 global network devices.</li>
-<li>Handled firmware upgrades and major incidents.</li>
-</ul>
-
-<br>
-
-<p><b>Software Engineer</b></p>
-<p>Tech Mahindra</p>
-<p>2018 – 2021</p>
-
-<ul>
-<li>WAN provisioning and carrier coordination.</li>
-<li>P1/P2 incident management and RCA.</li>
+<li>L3 troubleshooting WAN/MAN</li>
+<li>Managed 2000+ network devices globally</li>
+<li>Firmware upgrades and major incidents</li>
 </ul>
 
 </div>
@@ -297,21 +311,25 @@ Ekahau predictive surveys and large-scale network troubleshooting.
 <h2>Technical Skills</h2>
 
 <ul>
+
 <li>Cisco Networking</li>
-<li>Aruba Networks</li>
+<li>Aruba Networking</li>
 <li>Juniper</li>
 <li>Palo Alto Firewall</li>
 <li>Fortinet Firewall</li>
 <li>AWS & Azure</li>
+
 </ul>
 
 <h2 style="margin-top:30px;">Tools</h2>
 
 <ul>
+
 <li>Ekahau AI Pro</li>
 <li>Aruba Central</li>
 <li>ClearPass</li>
 <li>MS Visio</li>
+
 </ul>
 
 </div>
@@ -330,10 +348,10 @@ Ekahau predictive surveys and large-scale network troubleshooting.
 
 <ul>
 
-<li>Designed LAN and WLAN enterprise architecture.</li>
-<li>Participated in network planning and capacity analysis.</li>
-<li>Configured VLAN segmentation and switching infrastructure.</li>
-<li>Conducted validation testing and troubleshooting.</li>
+<li>Designed enterprise LAN/WLAN infrastructure</li>
+<li>Capacity planning and architecture discussions</li>
+<li>Configured VLAN segmentation</li>
+<li>Validation testing and troubleshooting</li>
 
 </ul>
 
@@ -349,18 +367,11 @@ Ekahau predictive surveys and large-scale network troubleshooting.
 
 <h2>Contact</h2>
 
-<p>Email: swetharpsk@gmail.com</p>
+<p>Email: swetharpsk@email.com</p>
 
 <p>
-
 LinkedIn:
-
-<a href="https://www.linkedin.com/in/swetha-r-87ba2612a" target="_blank">
-
-View Profile
-
-</a>
-
+<a href="https://www.linkedin.com" target="_blank">View Profile</a>
 </p>
 
 </div>
@@ -372,35 +383,6 @@ View Profile
 © 2026 Swetha R | Network Consultant Portfolio
 
 </footer>
-
-<script>
-
-particlesJS("particles-js",{
-
-particles:{
-
-number:{value:90},
-
-size:{value:3},
-
-line_linked:{
-enable:true,
-distance:140,
-color:"#00eaff",
-opacity:0.3,
-width:1
-},
-
-move:{
-enable:true,
-speed:2
-}
-
-}
-
-});
-
-</script>
 
 </body>
 </html>
