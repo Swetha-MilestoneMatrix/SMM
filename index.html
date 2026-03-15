@@ -8,7 +8,7 @@
 
 <title>Swetha R | Network Consultant</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -25,51 +25,20 @@ color:white;
 overflow-x:hidden;
 }
 
-html{
-scroll-behavior:smooth;
-}
+/* ---------- NETWORK BACKGROUND ---------- */
 
-/* ---------------- BACKGROUND NETWORK ANIMATION ---------------- */
-
-.network-bg{
+#networkCanvas{
 
 position:fixed;
-width:100%;
-height:100%;
 top:0;
 left:0;
+width:100%;
+height:100%;
 z-index:-1;
-overflow:hidden;
 
 }
 
-.icon{
-
-position:absolute;
-opacity:0.12;
-animation:float 25s linear infinite;
-
-}
-
-@keyframes float{
-
-0%{
-transform:translateY(100vh) rotate(0deg);
-}
-
-100%{
-transform:translateY(-10vh) rotate(360deg);
-}
-
-}
-
-/* Different sizes */
-
-.icon.small{width:40px}
-.icon.medium{width:70px}
-.icon.large{width:110px}
-
-/* ---------------- HEADER ---------------- */
+/* ---------- HEADER ---------- */
 
 header{
 
@@ -97,7 +66,7 @@ font-size:18px;
 
 }
 
-/* ---------------- NAV ---------------- */
+/* ---------- NAV ---------- */
 
 nav{
 
@@ -129,7 +98,7 @@ color:#00eaff;
 
 }
 
-/* ---------------- SECTIONS ---------------- */
+/* ---------- SECTIONS ---------- */
 
 section{
 
@@ -139,7 +108,7 @@ padding:70px 25px;
 
 }
 
-/* ---------------- CARDS ---------------- */
+/* ---------- CARDS ---------- */
 
 .card{
 
@@ -164,7 +133,7 @@ box-shadow:0 30px 70px rgba(0,0,0,0.7);
 
 }
 
-/* ---------------- HEADINGS ---------------- */
+/* ---------- HEADINGS ---------- */
 
 h2{
 
@@ -174,7 +143,7 @@ margin-bottom:18px;
 
 }
 
-/* ---------------- LIST ---------------- */
+/* ---------- LIST ---------- */
 
 ul{
 padding-left:20px;
@@ -185,32 +154,7 @@ margin:8px 0;
 color:#e2e8f0;
 }
 
-/* ---------------- PROJECT BOX ---------------- */
-
-.project{
-
-background:rgba(255,255,255,0.04);
-padding:20px;
-border-radius:10px;
-
-}
-
-/* ---------------- CONTACT ---------------- */
-
-#contact a{
-
-color:#00eaff;
-text-decoration:none;
-
-}
-
-#contact a:hover{
-
-text-decoration:underline;
-
-}
-
-/* ---------------- FOOTER ---------------- */
+/* ---------- FOOTER ---------- */
 
 footer{
 
@@ -226,17 +170,7 @@ color:#94a3b8;
 
 <body>
 
-<!-- NETWORK ANIMATED BACKGROUND -->
-
-<div class="network-bg">
-
-<img src="https://cdn-icons-png.flaticon.com/512/4241/4241910.png" class="icon small" style="left:10%; animation-duration:28s;">
-<img src="https://cdn-icons-png.flaticon.com/512/2881/2881142.png" class="icon medium" style="left:25%; animation-duration:35s;">
-<img src="https://cdn-icons-png.flaticon.com/512/906/906324.png" class="icon small" style="left:40%; animation-duration:32s;">
-<img src="https://cdn-icons-png.flaticon.com/512/483/483361.png" class="icon large" style="left:70%; animation-duration:40s;">
-<img src="https://cdn-icons-png.flaticon.com/512/906/906334.png" class="icon medium" style="left:85%; animation-duration:36s;">
-
-</div>
+<canvas id="networkCanvas"></canvas>
 
 <header>
 
@@ -264,7 +198,7 @@ color:#94a3b8;
 
 <p>
 
-Enterprise Network Consultant with 8+ years of experience designing and deploying enterprise LAN, WLAN and WAN environments. Specialized in Aruba and Cisco infrastructure, wireless design using Ekahau predictive surveys and large-scale network troubleshooting.
+Enterprise Network Consultant with 8+ years of experience designing and deploying enterprise LAN, WLAN and WAN environments. Specialized in Aruba and Cisco infrastructure and wireless architecture.
 
 </p>
 
@@ -288,18 +222,6 @@ Enterprise Network Consultant with 8+ years of experience designing and deployin
 <li>Configured Aruba switches, WLC and APs</li>
 </ul>
 
-<br>
-
-<p><b>SW/App/Cloud Tech Support</b></p>
-<p>Accenture</p>
-<p>2021 – 2023</p>
-
-<ul>
-<li>L3 troubleshooting WAN/MAN</li>
-<li>Managed 2000+ network devices globally</li>
-<li>Firmware upgrades and major incidents</li>
-</ul>
-
 </div>
 
 </section>
@@ -317,18 +239,6 @@ Enterprise Network Consultant with 8+ years of experience designing and deployin
 <li>Juniper</li>
 <li>Palo Alto Firewall</li>
 <li>Fortinet Firewall</li>
-<li>AWS & Azure</li>
-
-</ul>
-
-<h2 style="margin-top:30px;">Tools</h2>
-
-<ul>
-
-<li>Ekahau AI Pro</li>
-<li>Aruba Central</li>
-<li>ClearPass</li>
-<li>MS Visio</li>
 
 </ul>
 
@@ -342,20 +252,13 @@ Enterprise Network Consultant with 8+ years of experience designing and deployin
 
 <h2>Projects</h2>
 
-<div class="project">
-
-<b>Nestlé Enterprise Factory Network</b>
-
 <ul>
 
-<li>Designed enterprise LAN/WLAN infrastructure</li>
-<li>Capacity planning and architecture discussions</li>
-<li>Configured VLAN segmentation</li>
+<li>Nestlé Enterprise Factory LAN/WLAN Architecture</li>
+<li>Enterprise VLAN segmentation</li>
 <li>Validation testing and troubleshooting</li>
 
 </ul>
-
-</div>
 
 </div>
 
@@ -367,12 +270,9 @@ Enterprise Network Consultant with 8+ years of experience designing and deployin
 
 <h2>Contact</h2>
 
-<p>Email: swetharpsk@gmail.com</p>
+<p>Email: swetharpsk@email.com</p>
 
-<p>
-LinkedIn:
-<a href="https://www.linkedin.com" target="_blank">View Profile</a>
-</p>
+<p>LinkedIn: https://linkedin.com</p>
 
 </div>
 
@@ -383,6 +283,79 @@ LinkedIn:
 © 2026 Swetha R | Network Consultant Portfolio
 
 </footer>
+
+<script>
+
+const canvas = document.getElementById("networkCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let nodes = [];
+
+for(let i=0;i<70;i++){
+
+nodes.push({
+
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+vx:(Math.random()-0.5)*0.5,
+vy:(Math.random()-0.5)*0.5
+
+});
+
+}
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+nodes.forEach(node=>{
+
+node.x+=node.vx;
+node.y+=node.vy;
+
+if(node.x<0||node.x>canvas.width)node.vx*=-1;
+if(node.y<0||node.y>canvas.height)node.vy*=-1;
+
+ctx.beginPath();
+ctx.arc(node.x,node.y,2,0,Math.PI*2);
+ctx.fillStyle="#00eaff";
+ctx.fill();
+
+});
+
+for(let i=0;i<nodes.length;i++){
+
+for(let j=i+1;j<nodes.length;j++){
+
+let dx=nodes[i].x-nodes[j].x;
+let dy=nodes[i].y-nodes[j].y;
+
+let dist=Math.sqrt(dx*dx+dy*dy);
+
+if(dist<120){
+
+ctx.beginPath();
+ctx.moveTo(nodes[i].x,nodes[i].y);
+ctx.lineTo(nodes[j].x,nodes[j].y);
+ctx.strokeStyle="rgba(0,234,255,0.15)";
+ctx.stroke();
+
+}
+
+}
+
+}
+
+requestAnimationFrame(draw);
+
+}
+
+draw();
+
+</script>
 
 </body>
 </html>
