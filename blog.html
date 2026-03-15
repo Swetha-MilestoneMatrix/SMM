@@ -15,12 +15,16 @@
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background:#020617;
-color:white;
+
+/* pastel gradient background */
+
+background:linear-gradient(120deg,#fdf2f8,#f0f9ff,#ecfeff);
+
+color:#334155;
 overflow-x:hidden;
 }
 
-/* Background canvas */
+/* network canvas */
 
 #network-bg{
 position:fixed;
@@ -31,7 +35,7 @@ height:100%;
 z-index:-1;
 }
 
-/* Heading */
+/* heading */
 
 .blog-title{
 text-align:center;
@@ -39,12 +43,14 @@ font-size:42px;
 margin-top:60px;
 margin-bottom:40px;
 
-background:linear-gradient(90deg,#38bdf8,#60a5fa,#22c55e);
+/* pastel professional gradient */
+
+background:linear-gradient(90deg,#ec4899,#6366f1,#0ea5e9);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-/* Blog layout */
+/* blog container */
 
 .blog-container{
 display:grid;
@@ -55,27 +61,29 @@ margin:auto;
 padding:40px;
 }
 
-/* Blog cards */
+/* blog cards */
 
 .blog-card{
-background:rgba(255,255,255,0.04);
+background:rgba(255,255,255,0.7);
 padding:25px;
-border-radius:14px;
+border-radius:16px;
 text-decoration:none;
-color:white;
-border:1px solid rgba(255,255,255,0.08);
+color:#334155;
+
+border:1px solid rgba(0,0,0,0.05);
+
+backdrop-filter:blur(6px);
+
 transition:0.3s;
-backdrop-filter:blur(8px);
 }
 
 .blog-card:hover{
-transform:translateY(-10px);
-border-color:#38bdf8;
-box-shadow:0 15px 40px rgba(0,0,0,0.7);
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .blog-card h2{
-color:#38bdf8;
+color:#6366f1;
 margin-top:0;
 }
 
@@ -109,47 +117,46 @@ canvas.height = window.innerHeight;
 let nodes = [];
 let packets = [];
 
-/* Create nodes */
+/* create nodes */
 
-for(let i=0;i<30;i++){
-
+for(let i=0;i<35;i++){
 nodes.push({
 x:Math.random()*canvas.width,
 y:Math.random()*canvas.height
 });
-
 }
 
-/* Create packets */
+/* create packets */
 
-for(let i=0;i<20;i++){
-
+for(let i=0;i<15;i++){
 packets.push({
 from:Math.floor(Math.random()*nodes.length),
 to:Math.floor(Math.random()*nodes.length),
 progress:Math.random()
 });
-
 }
 
 function draw(){
 
 ctx.clearRect(0,0,canvas.width,canvas.height);
 
-/* Draw connections */
+/* connections */
 
 for(let i=0;i<nodes.length;i++){
 
 for(let j=i+1;j<nodes.length;j++){
 
-let dist = Math.hypot(nodes[i].x-nodes[j].x,nodes[i].y-nodes[j].y);
+let dist=Math.hypot(nodes[i].x-nodes[j].x,nodes[i].y-nodes[j].y);
 
-if(dist<250){
+if(dist<220){
 
 ctx.beginPath();
 ctx.moveTo(nodes[i].x,nodes[i].y);
 ctx.lineTo(nodes[j].x,nodes[j].y);
-ctx.strokeStyle="rgba(56,189,248,0.08)";
+
+/* pastel connection color */
+
+ctx.strokeStyle="rgba(99,102,241,0.15)";
 ctx.stroke();
 
 }
@@ -158,40 +165,39 @@ ctx.stroke();
 
 }
 
-/* Draw nodes */
+/* nodes */
 
 nodes.forEach(n=>{
-
 ctx.beginPath();
 ctx.arc(n.x,n.y,3,0,Math.PI*2);
-ctx.fillStyle="#38bdf8";
+ctx.fillStyle="#a5b4fc";
 ctx.fill();
-
 });
 
-/* Animate packets */
+/* packets */
 
 packets.forEach(p=>{
 
-let start = nodes[p.from];
-let end = nodes[p.to];
+let start=nodes[p.from];
+let end=nodes[p.to];
 
-p.progress += 0.01;
+p.progress+=0.008;
 
 if(p.progress>=1){
-
-p.from = Math.floor(Math.random()*nodes.length);
-p.to = Math.floor(Math.random()*nodes.length);
-p.progress = 0;
-
+p.from=Math.floor(Math.random()*nodes.length);
+p.to=Math.floor(Math.random()*nodes.length);
+p.progress=0;
 }
 
-let x = start.x + (end.x-start.x)*p.progress;
-let y = start.y + (end.y-start.y)*p.progress;
+let x=start.x+(end.x-start.x)*p.progress;
+let y=start.y+(end.y-start.y)*p.progress;
 
 ctx.beginPath();
 ctx.arc(x,y,2,0,Math.PI*2);
-ctx.fillStyle="#22c55e";
+
+/* soft pastel packet */
+
+ctx.fillStyle="#f472b6";
 ctx.fill();
 
 });
