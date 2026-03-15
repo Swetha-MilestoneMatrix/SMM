@@ -1,139 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog | Swetha R</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Swetha R</title>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background:
-                linear-gradient(135deg, rgba(240,248,255,0.92), rgba(255,240,250,0.92)),
-                url("https://cdn.cs.1worldsync.com/syndication/feeds/hp-ent/inline-content/35/1/B/1B7D9059DB24ADA10C68CAE31B0C0A22C0EBA05C_feature.jpg");
-            background-size: cover;
-            background-attachment: fixed;
-        }
+<style>
+body{
+font-family:Poppins;
+background:#0f172a;
+color:white;
+margin:0;
+padding:0;
+}
 
-        nav {
-            position: sticky;
-            top: 0;
-            background: rgba(255,255,255,0.7);
-            backdrop-filter: blur(12px);
-            text-align: center;
-            padding: 15px 0;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-        }
+header{
+text-align:center;
+padding:60px 20px;
+}
 
-        nav a {
-            margin: 0 25px;
-            text-decoration: none;
-            font-weight: 600;
-            color: #003049;
-            font-size: 16px;
-        }
+.blog-container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
 
-        nav a:hover {
-            color: #0077b6;
-        }
+.blog-card{
+background:#1e293b;
+padding:25px;
+border-radius:10px;
+margin-bottom:20px;
+transition:0.3s;
+}
 
-        .wrapper {
-            max-width: 900px;
-            margin: auto;
-            padding: 50px 20px;
-        }
+.blog-card:hover{
+transform:translateY(-5px);
+}
 
-        .card {
-            background: rgba(255,255,255,0.55);
-            backdrop-filter: blur(12px);
-            border-radius: 18px;
-            padding: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: 0.25s ease;
-        }
+.blog-card h2{
+margin-top:0;
+}
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 42px;
-            margin-bottom: 25px;
-            color: #003049;
-        }
-
-        .post-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: #004e89;
-            margin-bottom: 10px;
-        }
-
-        .post-date {
-            color: #0077b6;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .post-content {
-            line-height: 1.7;
-            font-size: 16px;
-        }
-
-    </style>
+.read-btn{
+display:inline-block;
+margin-top:10px;
+color:#38bdf8;
+text-decoration:none;
+}
+</style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-    </nav>
+<header>
+<h1>My Blogs</h1>
+<p>Thoughts on Networking, Technology & Career</p>
+</header>
 
-    <div class="wrapper">
+<div class="blog-container">
 
-        <h1>Swetha's Blog</h1>
+<div class="blog-card">
+<h2>My Journey to CCNP</h2>
+<p>Sharing my experience preparing for CCNP and working in network consulting.</p>
+<a class="read-btn" href="#">Read More →</a>
+</div>
 
-        <!-- BLOG POST 1 -->
-        <div class="card">
-            <div class="post-title">My Journey in Networking</div>
-            <div class="post-date">March 2026</div>
-            <div class="post-content">
-                Starting my career as a network engineer has been one of my most rewarding
-                experiences. Over the years, I have grown through hands‑on troubleshooting,
-                enterprise wireless design, and working with world‑class networking technologies...
-            </div>
-        </div>
+<div class="blog-card">
+<h2>Future of Networking with AI</h2>
+<p>How AI is transforming networking and infrastructure automation.</p>
+<a class="read-btn" href="#">Read More →</a>
+</div>
 
-        <!-- BLOG POST 2 -->
-        <div class="card">
-            <div class="post-title">Why Aruba CX Has Been a Game Changer</div>
-            <div class="post-date">February 2026</div>
-            <div class="post-content">
-                Aruba’s AOS‑CX platform has dramatically transformed modern networking. With
-                features like NAE, VSX, and automation capabilities, deployments have become
-                smoother and highly reliable...
-            </div>
-        </div>
-
-        <!-- BLOG POST 3 -->
-        <div class="card">
-            <div class="post-title">Troubleshooting WAN Issues Effectively</div>
-            <div class="post-date">January 2026</div>
-            <div class="post-content">
-                WAN outages can be extremely challenging. Over the years, I developed a
-                structured approach to identify routing inconsistencies, packet drops, and
-                performance issues with tools and vendor coordination...
-            </div>
-        </div>
-
-    </div>
+</div>
 
 </body>
 </html>
